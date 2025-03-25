@@ -102,6 +102,7 @@ const SignIn = () => {
 
             if (response.ok) {
                 navigate("/movies");
+                localStorage.setItem('isLogin','yes')
             } else {
                 alert("Login Failed");
             }

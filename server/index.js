@@ -5,6 +5,7 @@ import connectToDatabase from "./config/dbConfig.js";
 import cookieParser from "cookie-parser";
 import MovieRoutes  from './routes/movie.routes.js';
 import ShowRoutes from './routes/show.routes.js';
+import TheaterRoutes from './routes/theatre.routers.js';
 import cors from 'cors';
 config();
 
@@ -17,6 +18,7 @@ app.use(cookieParser());
 app.use('/api/user',UserRoutes);
 app.use('/api/movie',MovieRoutes);
 app.use('/api/show',ShowRoutes);
+app.use('/api/theatre',TheaterRoutes);
 
 app.use('*',(req,res)=>{
     res.status(404).send("Not Found");

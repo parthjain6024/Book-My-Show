@@ -69,7 +69,7 @@ const Show = () => {
   const { showId } = useParams();
 
   const getShowDetail = async () => {
-    const response = await fetch(`http://localhost:3001/api/show/${showId}`);
+    const response = await fetch(`http://localhost:3001/api/show/list`);
     const detail = await response.json();
     setShowDetail(detail);
   };
